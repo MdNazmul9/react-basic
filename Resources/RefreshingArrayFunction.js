@@ -5,3 +5,7 @@ const doubleNumArray = numbers.map((num)=>{
 }); 
 console.log("numbers: ", numbers)
 console.log("doubleNumArray: ", doubleNumArray)
+
+// Syntax JSX
+// Components
+// Data
