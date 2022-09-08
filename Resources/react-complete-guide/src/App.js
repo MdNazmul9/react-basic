@@ -5,6 +5,9 @@ function App() {
     <div className="App">
       <h1> Ehsan Marketing!</h1>
       <ExpenseItem></ExpenseItem>
+      <ExpenseItem></ExpenseItem>
+      <ExpenseItem></ExpenseItem>
+      <ExpenseItem></ExpenseItem>
     </div>
   );
 }
