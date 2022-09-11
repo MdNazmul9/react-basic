@@ -6,11 +6,11 @@ function App() {
       id: "e1",
       title: "Car Insurance",
       amount: 294.96,
-      date: new Date(2022, 9, 10),
+      date: new Date(2022, 9, 15),
     },
-    { id: "e2", title: "Pen", amount: 30.4, date: new Date(2022, 9, 10) },
-    { id: "e3", title: "Mouse", amount: 450.87, date: new Date(2022, 9, 10) },
-    { id: "e4", title: "Laptop", amount: 7200.95, date: new Date(2022, 9, 10) },
+    { id: "e2", title: "Pen", amount: 30.4, date: new Date(2022, 9, 11) },
+    { id: "e3", title: "Mouse", amount: 450.87, date: new Date(2022, 7, 10) },
+    { id: "e4", title: "Laptop", amount: 7200.95, date: new Date(2022, 5, 20) },
   ];
 
   return (
@@ -19,9 +19,7 @@ function App() {
       <ExpenseItem
         title={expense[0].title}
         amount={expense[0].amount}
-
         date={expense[0].date}
-
       />
       <ExpenseItem
         title={expense[1].title}
