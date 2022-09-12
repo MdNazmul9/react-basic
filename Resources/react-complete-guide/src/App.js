@@ -1,8 +1,7 @@
-import Expeses from "./components/Expeses";
-
+import Expenses from "./components/Expenses";
+import React from "react";
 
 const App = () => {
-
   const expenses = [
     {
       id: "e1",
@@ -15,14 +14,20 @@ const App = () => {
     { id: "e4", title: "Laptop", amount: 7200.95, date: new Date(2022, 5, 20) },
   ];
 
-  return (
-    <div>
-    <h1> Ehsan Marketing!</h1>
-    <Expeses expenses={expenses}/>
-    </div>
-      
-   
+  return React.createElement(
+    'div',
+    {},
+    React.createElement('h1', {}, "Ehsan's Marketing!"),
+    React.createElement(Expenses, {item: expenses}, ),
   );
+  
+  // return (
+  //   <div>
+  //   <h1> Ehsan Marketing!</h1>
+  //   <Expeses item={expenses}/>
+  //   </div>
+
+  // );
 };
 
 export default App;
