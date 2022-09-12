@@ -1,13 +1,13 @@
 import React from "react";
-import Card from "./Card";
+import Card from "../UI/Card";
+import "../UI/Card.css";
 import ExpenseItem from "./ExpenseItem";
-import "./Card.css";
 
 const Expenses = (props) => {
   
-
+  
   return (
-    <Card className="card">
+    <Card className="expenses">
      
       <ExpenseItem
         title={props.items[0].title}

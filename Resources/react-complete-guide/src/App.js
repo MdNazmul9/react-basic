@@ -1,4 +1,4 @@
-import Expenses from "./components/Expenses";
+import Expenses from "./components/Expenses/Expenses";
 import React from "react";
 
 const App = () => {
@@ -14,20 +14,19 @@ const App = () => {
     { id: "e4", title: "Laptop", amount: 7200.95, date: new Date(2022, 5, 20) },
   ];
 
-  return React.createElement(
-    'div',
-    {},
-    React.createElement('h1', {}, "Ehsan's Marketing!"),
-    React.createElement(Expenses, {items: expenses}, ),
-  );
-
-  // return (
-  //   <div>
-  //   <h1> Ehsan Marketing!</h1>
-  //   <Expeses item={expenses}/>
-  //   </div>
-
+  // return React.createElement(
+  //   'div',
+  //   {},
+  //   React.createElement('h1', {}, "Ehsan's Marketing!"),
+  //   React.createElement(Expenses, {items: expenses}, ),
   // );
+
+  return (
+    <div>
+      <h1> Ehsan Marketing!</h1>
+      <Expenses items={expenses} />
+    </div>
+  );
 };
 
 export default App;
