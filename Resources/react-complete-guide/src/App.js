@@ -18,9 +18,9 @@ const App = () => {
     'div',
     {},
     React.createElement('h1', {}, "Ehsan's Marketing!"),
-    React.createElement(Expenses, {item: expenses}, ),
+    React.createElement(Expenses, {items: expenses}, ),
   );
-  
+
   // return (
   //   <div>
   //   <h1> Ehsan Marketing!</h1>
