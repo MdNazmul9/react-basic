@@ -18,10 +18,13 @@ const ExpenseForm = () => {
   const titleChangeHandeler = (event) => {
     // console.log(event.target.value);
     // setEnteredTitle(event.target.value);
-    setUserInput({
-      ...userInput, // make sure other data is no change
-      enteredTitle: event.target.value,
-    })
+    // setUserInput({
+    //   ...userInput, // make sure other data is no change
+    //   enteredTitle: event.target.value,
+    // })
+    setUserInput((prevState)=>{
+      return {...prevState, enteredTitle: event.target.value}
+    });
 
   };
   
