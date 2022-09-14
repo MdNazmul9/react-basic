@@ -64,6 +64,7 @@ const ExpenseForm = () => {
           <input type="date" min="1990-01-01" max="2030-01-01"  onChange={dateChangeHandeler}/>
         </div>
       </div>
+
       <div className="new-expense__actions">
         <button type="submit"> Add Expense</button>
       </div>
