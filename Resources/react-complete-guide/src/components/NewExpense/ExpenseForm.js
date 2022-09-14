@@ -5,23 +5,42 @@ const ExpenseForm = () => {
   // default js nature
   // document.getElementById('').addEventListener('click', (event)=>{})
   
-  const [enteredTitle , setEnteredTitle] = useState('')
-  const [enteredDate , setEnteredDate] = useState('')
-  const [enteredAmount , setEnteredAmount] = useState('')
+  // const [enteredTitle , setEnteredTitle] = useState('')
+  // const [enteredDate , setEnteredDate] = useState('')
+  // const [enteredAmount , setEnteredAmount] = useState('')
+
+  const [userInput, setUserInput] = useState({
+    enteredTitle: '',
+    enteredAmount: '',
+    enteredDate: '',
+  })
 
   const titleChangeHandeler = (event) => {
     // console.log(event.target.value);
-    setEnteredTitle(event.target.value);
+    // setEnteredTitle(event.target.value);
+    setUserInput({
+      ...userInput, // make sure other data is no change
+      enteredTitle: event.target.value,
+    })
+
   };
   
   const amountChangeHandeler = (event) => {
     // console.log(event.target.value);
-    setEnteredAmount(event.target.value);
+    // setEnteredAmount(event.target.value);
+    setUserInput({
+      ...userInput, // make sure other data is no change
+      enteredAmount: event.target.value,
+    })
   };
   
   const dateChangeHandeler = (event) => {
     // console.log(event.target.value);
-    setEnteredDate(event.target.value);
+    // setEnteredDate(event.target.value);
+    setUserInput({
+      ...userInput, // make sure other data is no change
+      enteredDate: event.target.value,
+    })
   };
 
 
