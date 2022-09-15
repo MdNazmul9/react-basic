@@ -4,10 +4,10 @@ import "./ExpenseForm.css";
 const ExpenseForm = () => {
   // default js nature
   // document.getElementById('').addEventListener('click', (event)=>{})
-  
-  const [enteredTitle , setEnteredTitle] = useState('')
-  const [enteredDate , setEnteredDate] = useState('')
-  const [enteredAmount , setEnteredAmount] = useState('')
+
+  const [enteredTitle, setEnteredTitle] = useState("");
+  const [enteredDate, setEnteredDate] = useState("");
+  const [enteredAmount, setEnteredAmount] = useState("");
 
   // const [userInput, setUserInput] = useState({
   //   enteredTitle: '',
@@ -25,9 +25,8 @@ const ExpenseForm = () => {
     // setUserInput((prevState)=>{
     //   return {...prevState, enteredTitle: event.target.value}
     // });
-
   };
-  
+
   const amountChangeHandeler = (event) => {
     // console.log(event.target.value);
     setEnteredAmount(event.target.value);
@@ -36,7 +35,7 @@ const ExpenseForm = () => {
     //   enteredAmount: event.target.value,
     // })
   };
-  
+
   const dateChangeHandeler = (event) => {
     // console.log(event.target.value);
     setEnteredDate(event.target.value);
@@ -46,13 +45,21 @@ const ExpenseForm = () => {
     // })
   };
 
+  const submitHandeler = (event) => {
+    event.preventDefault();
 
-  const submitHandeler = () => {
-    
-  }
+    const expensedata = {
+      title: enteredTitle,
+      amount: enteredAmount,
+      date: new Date(enteredDate),
+   
+    }
+
+    console.log(expensedata)
+  };
 
   return (
-    <form onSubmit={}>
+    <form onSubmit={submitHandeler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
@@ -60,11 +67,21 @@ const ExpenseForm = () => {
         </div>
         <div className="new-expense__control">
           <label>Amount</label>
-          <input type="number" min="0.01" step="0.01" onChange={amountChangeHandeler} />
+          <input
+            type="number"
+            min="0.01"
+            step="0.01"
+            onChange={amountChangeHandeler}
+          />
         </div>
         <div className="new-expense__control">
           <label>Date</label>
-          <input type="date" min="1990-01-01" max="2030-01-01"  onChange={dateChangeHandeler}/>
+          <input
+            type="date"
+            min="1990-01-01"
+            max="2030-01-01"
+            onChange={dateChangeHandeler}
+          />
         </div>
       </div>
 
