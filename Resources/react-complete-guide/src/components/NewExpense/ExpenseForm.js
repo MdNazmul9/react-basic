@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ExpenseForm.css";
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
   // default js nature
   // document.getElementById('').addEventListener('click', (event)=>{})
 
@@ -55,7 +55,9 @@ const ExpenseForm = () => {
    
     }
 
-    console.log(expensedata);
+    // console.log(expensedata);
+    props.onSaveExpenseData(expensedata);
+
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
