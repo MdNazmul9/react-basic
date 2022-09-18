@@ -20,3 +20,6 @@ https://github.com/academind/react-complete-guide-code/blob/03-react-basics-work
 044 More-on-JavaScript-Arrow-Functions
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
  ```
+
+ # CH-05
+ https://github.com/academind/react-complete-guide-code/tree/05-rendering-lists-conditional-content
