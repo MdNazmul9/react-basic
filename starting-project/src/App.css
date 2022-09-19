@@ -1,7 +1,7 @@
 #goals {
   width: 35rem;
   max-width: 90%;
-  margin: 3rem;
+  margin: 3rem auto;
 }
 #goal-form {
   width: 30rem;
@@ -11,3 +11,4 @@
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
+
