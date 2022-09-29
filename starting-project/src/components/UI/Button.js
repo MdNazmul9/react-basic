@@ -1,13 +1,37 @@
-import React from 'react'
+import React from "react";
 
-import './Button.css'
+// import './Button.css';
 
-const Button = (props) => {
-  return (
-    <button type={props.type} className='button' onClick={props.onClick}>
-    {props.children}
-    </button>
-  )
-}
+import styled from "styled-components";
 
-export default Button
+const Button = styled.button`
+  .button {
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #8b005d;
+    color: white;
+    background: #8b005d;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
+    cursor: pointer;
+  }
+
+  .button:focus {
+    outline: none;
+  }
+
+  .button:hover,
+  .button:active {
+    background: #8b005d;
+    border-color: #8b005d;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
+  }
+`;
+// const Button = (props) => {
+//   return (
+//     <button type={props.type} className='button' onClick={props.onClick}>
+//     {props.children}
+//     </button>
+//   )
+// }
+
+export default Button;
