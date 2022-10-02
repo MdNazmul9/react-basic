@@ -4,20 +4,32 @@ import Card from "../UI/Card";
 import classes from './AddUser.module.css'
 
 const AddUser = (props) => {
+  const [enteredUsername, setEnteredUsername] = useState('');
+  const [enteredAge, setEnteredAge] = useState('');
+
   const addUserHandeler = (event) => {
     event.preventDefault();
+    console.log(enteredUsername, enteredAge)
   };
-  const usernameHandeler = () => {};
-  const ageHandeler = () => {};
+
+  const usernameChangeHandeler = (event) => {
+    setEnteredUsername(event.target.value);
+  };
+
+  const ageChangeHandeler = (event) => {
+    setEnteredAge(event.target.value);
+  };
+
+
 
   return (
     <Card className={classes.input}>
       <form onSubmit={addUserHandeler}>
         <label htmlFor="username">Username</label>
-        <input id="username" type="text" />
+        <input id="username" type="text"  onChange={usernameChangeHandeler}/>
 
         <label htmlFor="age">Age (Years)</label>
-        <input id="age" type="number" />
+        <input id="age" type="number"  onChange={ageChangeHandeler}/>
 
        <Button type="submit">Add User</Button>
        
